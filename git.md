@@ -21,7 +21,13 @@ git remote add -f <custom branch name> <path to Source root>
 git merge <custom branch name>/master
 mkdir <dest directory>
 git mv !(<dir/file to exclude>|<dir/file to exclude 2>) <dest directory>
-git commit
+git commit -m "Move src files to target dir"
+# If on a branch
+git checkout master
+git merge <branch name>
+# End if
+git push
+
 ```
 
 #### Complex merge (root contains a bunch of stuff that also might conflict like a package.json)
@@ -42,6 +48,11 @@ git commit -m "Move src files to target dir"
 cd tmp
 git mv * ..
 git commit -m "Move tmp files back to root"
+# If on a branch
+git checkout master
+git merge <branch name>
+# End if
+git push
 ```
 
 ### Reset Source
