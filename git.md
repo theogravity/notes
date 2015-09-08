@@ -1,5 +1,10 @@
 ## Migrating a git repo into a subdirectory of another git repo while keeping history
 
+Note to see a file's history, you have to use `git log --follow <file>`:
+
+Addl info:
+http://stackoverflow.com/questions/2314652/is-it-possible-to-move-rename-files-in-git-and-maintain-their-history
+
 ### Source
 
 (Do in the source git root)
