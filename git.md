@@ -13,9 +13,15 @@
 ```bash
 # http://stackoverflow.com/questions/4612157/how-to-use-mv-command-to-move-files-except-those-in-a-specific-directory
 shopt -s extglob
-git remote add -f <branch name> <path to Source root>
-git merge <branch name>/master
+git remote add -f <custom branch name> <path to Source root>
+git merge <custom branch name>/master
 mkdir <dest directory>
 git mv !(<dir to exclude>|<dir to exclude 2>) <dest directory>
 git commit
 ```
+
+### Reset Source
+
+If you need to re-use the source again for another transfer, or just pure reset, do:
+
+`git reset --hard refs/original/refs/heads/master`
