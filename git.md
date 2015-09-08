@@ -11,12 +11,14 @@
 (Do in destination git root)
 
 ```bash
+# If you want to do this in a branch
+git checkout -b <branch name>
 # http://stackoverflow.com/questions/4612157/how-to-use-mv-command-to-move-files-except-those-in-a-specific-directory
 shopt -s extglob
 git remote add -f <custom branch name> <path to Source root>
 git merge <custom branch name>/master
 mkdir <dest directory>
-git mv !(<dir to exclude>|<dir to exclude 2>) <dest directory>
+git mv !(<dir/file to exclude>|<dir/file to exclude 2>) <dest directory>
 git commit
 ```
 
