@@ -6,7 +6,7 @@
 git filter-branch -f --prune-empty --subdirectory-filter <directory of contents> master
 git remote remove origin
 git remote add origin <new repo url> 
-git push origin .
+git push --set-upstream origin master
 ```
 
 ## Migrating a git repo into a subdirectory of another git repo while keeping history
