@@ -1,3 +1,14 @@
+## Migrating a git repo into a new repo
+
+### Source
+
+```bash
+git filter-branch -f --prune-empty --subdirectory-filter <directory of contents> master
+git remote remove origin
+git remote add origin <new repo url> 
+git push
+```
+
 ## Migrating a git repo into a subdirectory of another git repo while keeping history
 
 Note to see a file's history, you have to use `git log --follow <file>`:
@@ -9,11 +20,9 @@ http://stackoverflow.com/questions/2314652/is-it-possible-to-move-rename-files-i
 
 (Do in the source git root)
 
-`git filter-branch -f --prune-empty --subdirectory-filter <directory of contents> master`
-
-### Destination
-
-(Do in destination git root)
+```bash
+git filter-branch -f --prune-empty --subdirectory-filter <directory of contents> master
+```
 
 #### Simple merge (your root does not have a bunch of files / dirs)
 
