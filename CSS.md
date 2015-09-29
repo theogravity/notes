@@ -45,4 +45,4 @@ $BGColor = black;
       /* This is here to remove the artifacting of the shadows on the upper half of the rectangle */
       clip-path: inset(16% 16% 0 0);
     }
-    ```
+```
