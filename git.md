@@ -1,3 +1,12 @@
+## Undo last commit after a push
+
+Note: Don't do it unless you understand the consequences
+
+```bash
+git reset --hard HEAD~1
+git push --force
+```
+
 ## Migrating a git repo into a new repo
 
 ### Source
