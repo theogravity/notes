@@ -2,6 +2,14 @@
 
 - use `npm ls <package_name>` to verify that multiple copies of a package are not installed
 
+### Shrinkwrap issue: missing `x` required by `y` 
+
+If doing an `npm shrinkwrap` and you get the above message, go into the `node_modules/y` dir and manually install the missing `x`, then attempt the shrinkwrap again. 
+
+There is also a bug with using `npm shrinkwrap --dev`, where shrinkwrap seems to check for a dep's devDependencies:
+
+https://github.com/npm/npm/issues/10555
+
 ## React
 
 ### Dealing with overlays / lightboxes / modals
