@@ -1,3 +1,7 @@
+## Easier review on github
+
+Clear whitespaces on PR reviews with `?w=1`. You cannot add comments though in this mode, but makes the thing easier to read.
+
 ## Undo last commit after a push
 
 Note: Don't do it unless you understand the consequences
