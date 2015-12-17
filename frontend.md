@@ -24,3 +24,15 @@ If you have to implement an overlay, which genreally requires that it be rendere
 ## Webpack
 
 - If you're using a module that uses webpack, and have problems trying to get it to load, look to the webpack configuration for potential issues/locations (eg aliases) in that module
+
+### React is being loaded twice
+
+Add to config
+
+```
+resolve: {
+  alias: {
+    react: path.resolve(__dirname, './node_modules/react'),
+  }
+}
+```
