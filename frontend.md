@@ -2,6 +2,10 @@
 
 - use `npm ls <package_name>` to verify that multiple copies of a package are not installed
 
+### Shrinkwrap really huge after saving a new package
+
+Run `npm prune` then `npm shrinkwrap --dev`
+
 ### Shrinkwrap issue: missing `x` required by `y` 
 
 If doing an `npm shrinkwrap` and you get the above message, go into the `node_modules/y` dir and manually install the missing `x`, then attempt the shrinkwrap again. 
