@@ -1,5 +1,7 @@
 ## vmoptions config
 
+https://www.jetbrains.com/webstorm/help/tuning-webstorm.html#copy1
+
 ```
 -Xms1024m
 -Xmx2048m
