@@ -28,6 +28,7 @@ If you have to implement an overlay, which genreally requires that it be rendere
 ## Webpack
 
 - If you're using a module that uses webpack, and have problems trying to get it to load, look to the webpack configuration for potential issues/locations (eg aliases) in that module
+- If having issues with `babel-loader`, and you have a `.babelrc`, try moving the contents of the `.babelrc` directly to the loader options
 
 ### React is being loaded twice
 
