@@ -46,5 +46,5 @@ resolve: {
 
 ### ES7 async and throwing errors
 
-- Cannot use `throw new Error()` within an `async` body. Make sure to `reject(new Error())` instead. The rejection in `async` will thrown
+- Cannot use `throw new Error()` within an `async` body if inside a `Promise`. Make sure to `reject(new Error())` instead. The rejection in `async` will thrown
 - Refer to http://stackoverflow.com/questions/19943360/should-async-function-never-ever-throw for more info
