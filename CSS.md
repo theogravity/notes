@@ -47,3 +47,7 @@ $BGColor = black;
     }
 }
 ```
+
+# 300ms tap delay fix
+
+https://gist.github.com/gajus/bbf06ea2e37047b01e70
