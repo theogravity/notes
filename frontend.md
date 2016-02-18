@@ -48,3 +48,31 @@ resolve: {
 
 - Cannot use `throw new Error()` within an `async` body if inside a `Promise`. Make sure to `reject(new Error())` instead. The rejection in `async` will thrown
 - Refer to http://stackoverflow.com/questions/19943360/should-async-function-never-ever-throw for more info
+
+## Testing
+
+### Jasmine spies and es6 exports
+
+If you want to use `spyOn` to mock a function, the following will not work:
+
+```javascript
+// test.js
+export function test() {}
+
+// mock.js
+import { test } from './test'
+
+spyOn({ test }, 'test')...
+```
+
+Instead do:
+
+```javascript
+// test.js
+export function test() {}
+
+// mock.js
+import * as testLib from './test'
+
+spyOn(testLib, 'test')...
+```
