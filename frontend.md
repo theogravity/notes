@@ -76,3 +76,9 @@ import * as testLib from './test'
 
 spyOn(testLib, 'test')...
 ```
+
+## Images
+
+### Font icons vs SVG
+
+https://github.com/blog/2112-delivering-octicons-with-svg
