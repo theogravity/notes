@@ -82,3 +82,7 @@ spyOn(testLib, 'test')...
 ### Font icons vs SVG
 
 https://github.com/blog/2112-delivering-octicons-with-svg
+
+## cors with `file:///`
+
+`file:///` lacks a domain so `document.domain` will be blank and cannot be altered; `document.domain` alteration is only allowed against sub-parts of a domain (eg `test.viv.ai` -> `viv.ai`). 
