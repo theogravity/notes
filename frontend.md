@@ -94,3 +94,12 @@ https://github.com/blog/2112-delivering-octicons-with-svg
 `file:///` lacks a domain so `document.domain` will be blank and cannot be altered; `document.domain` alteration is only allowed against sub-parts of a domain (eg `test.viv.ai` -> `viv.ai`). 
 
 This problem can be encountered if one is choosing to cache downloaded content from a host directly into the iOS FS/memory. Instead, iOS should be always fetching directly from the host using `If-then-match` headers to check if the cache has changed, with the host returning some kind of cache validation (eg etag value) + a 304 response if the cache hasn't changed.
+
+## Keypressing
+
+- if you want the actual `keyCode` you must use `keyUp` or `keyDown`
+- for `charCode`, use 'keyPress`
+
+http://stackoverflow.com/questions/7626328/getting-the-character-from-keyup-event
+
+
