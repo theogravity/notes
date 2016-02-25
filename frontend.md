@@ -103,6 +103,14 @@ https://github.com/blog/2112-delivering-octicons-with-svg
 
 This problem can be encountered if one is choosing to cache downloaded content from a host directly into the iOS FS/memory. Instead, iOS should be always fetching directly from the host using `If-then-match` headers to check if the cache has changed, with the host returning some kind of cache validation (eg etag value) + a 304 response if the cache hasn't changed.
 
+## Input masking
+
+- input masks can show the mask as you type (eg phone # (___) ___-_____), but this has implementation complexity if we allow the user to reposition the cursor and add/remove chars
+- there seems to be an issue with using the input type number where it will not display the value on chrome if the value attribute has an incomplete value (eg 2. vs 2.1). Mobile safari seems okay with this
+- the input mask libraries out there are quite limited and require a bit of work to impl if we want to build our own from scratch (I would not want to do this); I have not seen one that allows you to specify 'forced entry text' (eg if the user should be entering in the exact value of 12.3 vs the input mask of ##.#)
+- To do forced entry text, I am having the dev specify a separate prop that says "user must type <text>", which will accept/reject input if the next character matches <text>. Placeholders would have to be disabled and a new layer under the text input would be used to display the guidance text that the user must type
+- Had to define keyUp/keyPress to handle new input to feed into the masking library; if I want to update state in the component, I need to make sure that the onChange handler wasn't also sending out state during this time so the new input isnt doubled
+
 ## Keypressing
 
 - if you want the actual `keyCode` you must use `keyUp` or `keyDown`
