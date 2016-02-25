@@ -61,7 +61,7 @@ resolve: {
 
 Set the `step` attribute to `any` to allow floats.
 
-In Chrome, decimals do not register until there is a figure after the decimal when set directly in a `value` attribute. For example, a value of `2.` will not show in the input, but `2.5` will. Mobile safari (ios 9) does not seem to have this problem. The decimal will show as it's typed in.
+In Chrome, decimals do not register until there is a figure after the decimal when set directly in a `value` attribute. For example, a value of `2.` will not show in the input, but `2.5` will. Mobile safari (ios 9) does not seem to have this problem.
 
 ## Testing
 
