@@ -1,3 +1,9 @@
+## babel
+
+### Odd issues where old code is referenced that no longer exists
+
+Could be the `.babel.json` cache file hasn't been updated or is in a bad state. Remove the file by going into your home directory and then run the transpiler again.
+
 ## npm
 
 - use `npm ls <package_name>` to verify that multiple copies of a package are not installed
