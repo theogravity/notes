@@ -55,6 +55,14 @@ resolve: {
 - Cannot use `throw new Error()` within an `async` body if inside a `Promise`. Make sure to `reject(new Error())` instead. The rejection in `async` will thrown
 - Refer to http://stackoverflow.com/questions/19943360/should-async-function-never-ever-throw for more info
 
+## input
+
+### input type number
+
+Set the `step` attribute to `any` to allow floats.
+
+Decimals do not register until there is a figure after the decimal. Eg value of `2.` will not show in the input, but `2.5` will.
+
 ## Testing
 
 ### Jasmine spies and es6 exports
