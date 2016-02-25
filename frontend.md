@@ -105,6 +105,8 @@ This problem can be encountered if one is choosing to cache downloaded content f
 
 ## Input masking
 
+Used https://github.com/insin/inputmask-core
+
 - input masks can show the mask as you type (eg phone # (___) ___-_____), but this has implementation complexity if we allow the user to reposition the cursor and add/remove chars
 - there seems to be an issue with using the input type number where it will not display the value on chrome if the value attribute has an incomplete value (eg 2. vs 2.1). Mobile safari seems okay with this
 - the input mask libraries out there are quite limited and require a bit of work to impl if we want to build our own from scratch (I would not want to do this); I have not seen one that allows you to specify 'forced entry text' (eg if the user should be entering in the exact value of 12.3 vs the input mask of ##.#)
