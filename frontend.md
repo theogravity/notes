@@ -98,7 +98,7 @@ This problem can be encountered if one is choosing to cache downloaded content f
 ## Keypressing
 
 - if you want the actual `keyCode` you must use `keyUp` or `keyDown`
-- for `charCode`, use 'keyPress`
+- for `charCode`, use `keyPress`
 
 http://stackoverflow.com/questions/7626328/getting-the-character-from-keyup-event
 
