@@ -18,3 +18,7 @@ export async function blah (data) {
   const rslt = await db.one('select * FROM some_func($1::bytea)', byteaData)
 }
 ```
+
+# Misc
+
+http://rethinkdb.com/ looks pretty neat
