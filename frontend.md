@@ -124,4 +124,7 @@ Used https://github.com/insin/inputmask-core
 
 http://stackoverflow.com/questions/7626328/getting-the-character-from-keyup-event
 
+## z-index
+
+http://philipwalton.com/articles/what-no-one-told-you-about-z-index/
 
