@@ -1,4 +1,4 @@
-# CSS Triangles with box-shadow
+## CSS Triangles with box-shadow
 
 Essentially a square with defined borders rotated 45 degrees.
 
@@ -48,6 +48,10 @@ $BGColor = black;
 }
 ```
 
-# 300ms tap delay fix
+## 300ms tap delay fix
 
 https://gist.github.com/gajus/bbf06ea2e37047b01e70
+
+## em article
+
+http://zellwk.com/blog/rem-vs-em/
