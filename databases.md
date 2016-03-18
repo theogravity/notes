@@ -5,6 +5,10 @@
 - `bytea` data types require specific conversion
 - be aware of which db call to use depending on the situation https://github.com/vitaly-t/pg-promise#query-result-mask
 
+## Trigram indices
+
+https://about.gitlab.com/2016/03/18/fast-search-using-postgresql-trigram-indexes/?
+
 ## Dealing with bytea from node-postgres
 
 ```js
