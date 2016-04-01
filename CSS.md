@@ -1,6 +1,7 @@
-## position: fixed does not work with transform
+## situations where position: fixed does not work
 
-http://stackoverflow.com/questions/15194313/webkit-css-transform3d-position-fixed-issue
+- when an input has focus (native)
+- transforms: http://stackoverflow.com/questions/15194313/webkit-css-transform3d-position-fixed-issue
 
 ## CSS Triangles with box-shadow
 
