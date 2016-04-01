@@ -1,3 +1,7 @@
+## position: fixed does not work with transform
+
+http://stackoverflow.com/questions/15194313/webkit-css-transform3d-position-fixed-issue
+
 ## CSS Triangles with box-shadow
 
 Essentially a square with defined borders rotated 45 degrees.
