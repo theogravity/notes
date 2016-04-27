@@ -2,6 +2,14 @@
 
 - https://github.com/nodejs/node/blob/master/doc/topics/the-event-loop-timers-and-nexttick.md
 
+## mobile safari
+
+### programmatically doing a focus to input
+
+You cannot do an input focus programmatically outside of a user-interaction event handler; the user has to interact with the UI before you are able to redirect focus
+
+- http://blog.pixelastic.com/2015/07/13/trigger-focus-on-input-on-iphone-programmatically/
+
 ## babel
 
 ### Odd issues where old code is referenced that no longer exists
