@@ -40,7 +40,8 @@ https://github.com/npm/npm/issues/10555
 
 ### Peformanace analysis
 
-http://benchling.engineering/performance-engineering-with-react/ (Also see part 2)
+- http://benchling.engineering/performance-engineering-with-react/ (Also see part 2)
+- (performance timing on `setState`) https://github.com/facebook/react/issues/3436
 
 ### Dealing with overlays / lightboxes / modals
 
