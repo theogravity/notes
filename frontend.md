@@ -57,6 +57,12 @@ If you have to implement an overlay, which genreally requires that it be rendere
 - If you're using a module that uses webpack, and have problems trying to get it to load, look to the webpack configuration for potential issues/locations (eg aliases) in that module
 - If having issues with `babel-loader`, and you have a `.babelrc`, try moving the contents of the `.babelrc` directly to the loader options
 
+### bundle size too high
+
+- Analyze with https://github.com/robertknight/webpack-bundle-size-analyzer
+- use plugins to minimize, remove duplicates
+- shift static assets to a vendor bundle
+
 ### React is being loaded twice
 
 Add to config
