@@ -63,6 +63,15 @@ If you have to implement an overlay, which genreally requires that it be rendere
 - use plugins to minimize, remove duplicates
 - shift static assets to a vendor bundle
 
+if using react + webpack, use this plugin to reduce size
+
+```
+    // allows React to be minified properly in production
+    new webpack.DefinePlugin({
+      'process.env.NODE_ENV': JSON.stringify(IS_DEVELOPMENT_MODE ? 'development' : 'production')
+    })
+```
+
 ### React is being loaded twice
 
 Add to config
