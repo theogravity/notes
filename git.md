@@ -1,7 +1,3 @@
-## Split a directory into another repo w/ history
-
-https://github.com/vangorra/git_split
-
 ## Easier review on github
 
 Clear whitespaces on PR reviews with `?w=1`. You cannot add comments though in this mode, but makes the thing easier to read.
@@ -16,6 +12,8 @@ git push --force
 ```
 
 ## Migrating a git repo into a new repo
+
+try this first https://github.com/vangorra/git_split
 
 ### Source
 
