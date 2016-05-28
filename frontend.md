@@ -1,3 +1,8 @@
+## Connection warmup
+
+https://www.igvita.com/2015/08/17/eliminating-roundtrips-with-preconnect/
+https://developer.mozilla.org/en-US/docs/Web/HTTP/Controlling_DNS_prefetching
+
 ## JS
 
 - https://github.com/nodejs/node/blob/master/doc/topics/the-event-loop-timers-and-nexttick.md
