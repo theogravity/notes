@@ -8,4 +8,5 @@ https://news.ycombinator.com/item?id=11830598
 How it works:
 
 https://fin.plaid.com/articles/the-basics-of-ach
+
 https://fin.plaid.com/articles/inside-ach-payments-with-stripe-and-plaid
