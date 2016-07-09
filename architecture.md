@@ -5,6 +5,10 @@ https://kivikakk.ee/cryptography/2016/02/20/breaking-homegrown-crypto.html
 
 https://news.ycombinator.com/item?id=11636847
 
+### REST API framework for node
+
+http://swagger.io/
+
 ### NPM mirroring options
 
 https://addyosmani.com/blog/using-npm-offline/
