@@ -72,7 +72,7 @@ export default class Sqlite {
         return await Promise.resolve(row)
       }
 
-      return await Promise.reject({ code: '_RESULT_MISMATCH', 'Got no results'})
+      return await Promise.reject({ code: '_RESULT_MISMATCH', msg: 'Got no results'})
     } catch (e) {
       return await Promise.reject(e)
     }
@@ -104,7 +104,7 @@ export default class Sqlite {
         return await Promise.resolve(rows)
       }
 
-      return await Promise.reject({ code: '_RESULT_MISMATCH', 'Got no results'})
+      return await Promise.reject({ code: '_RESULT_MISMATCH', msg: 'Got no results'})
     } catch (e) {
       return await Promise.reject(e)
     }
