@@ -127,7 +127,7 @@ export default class Sqlite {
  * Translates the query parameters in the statement to
  * be used with the sqlite lib
  * @param {string} q
- * @params {mixed} params
+ * @param {mixed} params
  */
 function transformFromPgStmt (q, params) {
   let query = q.replace(PLACEHOLDER_REGXP, '?')
