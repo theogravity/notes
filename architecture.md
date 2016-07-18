@@ -13,3 +13,7 @@ http://swagger.io/
 
 https://addyosmani.com/blog/using-npm-offline/
 https://github.com/mixu/npm_lazy
+
+### AWS Lambda / breaking out services
+
+http://martinfowler.com/articles/serverless.html
