@@ -17,3 +17,7 @@ https://github.com/mixu/npm_lazy
 ### AWS Lambda / breaking out services
 
 http://martinfowler.com/articles/serverless.html
+
+### HTTP linter
+
+https://github.com/vfaronov/httpolice
