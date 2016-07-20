@@ -165,3 +165,6 @@ http://stackoverflow.com/questions/7626328/getting-the-character-from-keyup-even
 
 http://philipwalton.com/articles/what-no-one-told-you-about-z-index/
 
+## audio processing
+
+https://howlerjs.com/
