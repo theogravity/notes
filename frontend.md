@@ -1,3 +1,7 @@
+## hackathon starter kit
+
+https://github.com/sahat/hackathon-starter/blob/master/README.md
+
 ## Connection warmup
 
 https://www.igvita.com/2015/08/17/eliminating-roundtrips-with-preconnect/
