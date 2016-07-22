@@ -1,4 +1,8 @@
 http://nickcraver.com/blog/2016/02/17/stack-overflow-the-architecture-2016-edition/
+
+### Security
+
+https://github.com/FallibleInc/security-guide-for-developers
 https://kivikakk.ee/cryptography/2016/02/20/breaking-homegrown-crypto.html
 
 ### OAuth alternative
