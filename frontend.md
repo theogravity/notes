@@ -1,3 +1,7 @@
+## React patterns
+
+https://github.com/krasimir/react-in-patterns
+
 ## hackathon starter kit
 
 https://github.com/sahat/hackathon-starter/blob/master/README.md
