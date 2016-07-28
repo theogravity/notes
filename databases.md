@@ -1,5 +1,7 @@
 # Postgres
 
+- why uber switched from postgres to mysql https://ayende.com/blog/175137/re-why-uber-engineering-switched-from-postgres-to-mysql
+
 - Really liked using https://github.com/vitaly-t/pg-promise compared to `postgres-gen`. `pg-promise` combined with `async`/`await` was a seamless experience
 - It is just as seamless using the default support for ES6 generators provided by [pg-promise](https://github.com/vitaly-t/pg-promise), see [Tasks](https://github.com/vitaly-t/pg-promise/wiki/Learn-by-Example#tasks) and [Generators](https://github.com/vitaly-t/pg-promise#generators)
 - `bytea` data types require specific conversion
