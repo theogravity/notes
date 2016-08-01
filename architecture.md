@@ -1,5 +1,9 @@
 http://nickcraver.com/blog/2016/02/17/stack-overflow-the-architecture-2016-edition/
 
+### Google QUIC protocol vs TCP
+
+https://ma.ttias.be/googles-quic-protocol-moving-web-tcp-udp/
+
 ### Security
 
 https://github.com/FallibleInc/security-guide-for-developers
