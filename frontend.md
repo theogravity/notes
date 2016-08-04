@@ -14,6 +14,7 @@ https://developer.mozilla.org/en-US/docs/Web/HTTP/Controlling_DNS_prefetching
 ## JS
 
 - https://github.com/nodejs/node/blob/master/doc/topics/the-event-loop-timers-and-nexttick.md
+- http://stackoverflow.com/questions/24987896/how-does-bluebirds-util-tofastproperties-function-make-an-objects-properties/24989927#24989927
 
 ## mobile safari
 
