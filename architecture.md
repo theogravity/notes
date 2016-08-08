@@ -9,6 +9,10 @@ https://ma.ttias.be/googles-quic-protocol-moving-web-tcp-udp/
 https://github.com/FallibleInc/security-guide-for-developers
 https://kivikakk.ee/cryptography/2016/02/20/breaking-homegrown-crypto.html
 
+#### Hardware security module impl arch
+
+https://medium.com/@Ledger/how-to-properly-secure-cryptocurrencies-exchanges-511fe7a669a3#.2dm3ymmkc
+
 ### OAuth alternative
 
 https://news.ycombinator.com/item?id=11636847
