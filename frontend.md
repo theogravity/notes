@@ -1,7 +1,3 @@
-## React patterns
-
-https://github.com/krasimir/react-in-patterns
-
 ## hackathon starter kit
 
 https://github.com/sahat/hackathon-starter/blob/master/README.md
@@ -51,6 +47,14 @@ There is also a bug with using `npm shrinkwrap --dev`, where shrinkwrap seems to
 https://github.com/npm/npm/issues/10555
 
 ## React
+
+### Fibers + React archiecture details
+
+https://github.com/acdlite/react-fiber-architecture/blob/master/README.md
+
+### React patterns
+
+https://github.com/krasimir/react-in-patterns
 
 ### Peformanace analysis
 
