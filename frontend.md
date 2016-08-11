@@ -1,3 +1,7 @@
+## shadow dom primer
+
+https://developers.google.com/web/fundamentals/primers/shadowdom/
+
 ## hackathon starter kit
 
 https://github.com/sahat/hackathon-starter/blob/master/README.md
