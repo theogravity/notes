@@ -56,6 +56,10 @@ https://github.com/npm/npm/issues/10555
 
 https://github.com/acdlite/react-fiber-architecture/blob/master/README.md
 
+kinda like fibers but a concrete impl
+
+https://github.com/redfin/react-server
+
 ### React patterns
 
 https://github.com/krasimir/react-in-patterns
