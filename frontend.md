@@ -15,6 +15,16 @@ https://developer.mozilla.org/en-US/docs/Web/HTTP/Controlling_DNS_prefetching
 
 - https://github.com/nodejs/node/blob/master/doc/topics/the-event-loop-timers-and-nexttick.md
 - http://stackoverflow.com/questions/24987896/how-does-bluebirds-util-tofastproperties-function-make-an-objects-properties/24989927#24989927
+- 
+## Node
+
+### Buffer security
+
+Use `Buffer.from` instead of `new Buffer()`
+
+https://github.com/nodejs/node/issues/4660
+
+And use https://nodejs.org/api/buffer.html#buffer_the_zero_fill_buffers_command_line_option to zero out buffers
 
 ## mobile safari
 
