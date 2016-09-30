@@ -1,3 +1,9 @@
+### What happens when you type google.com into your browser?
+
+https://github.com/alex/what-happens-when
+
+### Stack overflow architecture
+
 http://nickcraver.com/blog/2016/02/17/stack-overflow-the-architecture-2016-edition/
 
 ### Google QUIC protocol vs TCP
