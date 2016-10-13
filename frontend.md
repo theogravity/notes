@@ -1,3 +1,7 @@
+## node core dump analysis
+
+https://www.joyent.com/blog/post-mortem-debugging-and-promises
+
 ## shadow dom primer
 
 https://developers.google.com/web/fundamentals/primers/shadowdom/
