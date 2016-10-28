@@ -1,6 +1,7 @@
 ### Secrets management
 
 http://chairnerd.seatgeek.com/secret-management-with-vault/
+
 https://www.vaultproject.io/
 
 ### OAuth 2 server + ACL
