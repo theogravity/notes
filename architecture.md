@@ -1,3 +1,8 @@
+### Secrets management
+
+http://chairnerd.seatgeek.com/secret-management-with-vault/
+https://www.vaultproject.io/
+
 ### OAuth 2 server + ACL
 
 https://github.com/ory-am/hydra?branches
