@@ -1,5 +1,7 @@
 # Postgres
 
+- Securing postgres http://thebuild.com/presentations/pgconfeu-2016-securing-postgresql.pdf
+
 - why uber switched from postgres to mysql https://ayende.com/blog/175137/re-why-uber-engineering-switched-from-postgres-to-mysql
 
 - Really liked using https://github.com/vitaly-t/pg-promise compared to `postgres-gen`. `pg-promise` combined with `async`/`await` was a seamless experience
