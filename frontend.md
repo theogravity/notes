@@ -66,6 +66,8 @@ https://github.com/npm/npm/issues/10555
 
 ## React
 
+https://tylermcginnis.com/react-interview-questions/
+
 ### Fibers + React archiecture details
 
 https://github.com/acdlite/react-fiber-architecture/blob/master/README.md
