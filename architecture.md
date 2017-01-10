@@ -1,3 +1,7 @@
+### Scaling facebook w/ load balancers
+
+https://www.usenix.org/conference/lisa16/conference-program/presentation/shuff
+
 ### Crypto 101
 
 https://www.crypto101.io/
