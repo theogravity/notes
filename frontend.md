@@ -68,6 +68,10 @@ https://github.com/npm/npm/issues/10555
 
 https://tylermcginnis.com/react-interview-questions/
 
+### React for TV devices - perf / optimizations
+
+http://techblog.netflix.com/2017/01/crafting-high-performance-tv-user.html
+
 ### Fibers + React archiecture details
 
 https://github.com/acdlite/react-fiber-architecture/blob/master/README.md
