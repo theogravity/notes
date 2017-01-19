@@ -1,3 +1,7 @@
+### reddit caching arch
+
+https://redditblog.com/2017/1/17/caching-at-reddit/
+
 ### Scaling facebook w/ load balancers
 
 https://www.usenix.org/conference/lisa16/conference-program/presentation/shuff
