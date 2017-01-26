@@ -1,5 +1,7 @@
 # Postgres
 
+- Postgres internals http://www.interdb.jp/pg/index.html
+
 - Securing postgres http://thebuild.com/presentations/pgconfeu-2016-securing-postgresql.pdf
 
 - why uber switched from postgres to mysql https://ayende.com/blog/175137/re-why-uber-engineering-switched-from-postgres-to-mysql
