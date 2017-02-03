@@ -1,3 +1,7 @@
+### signing resource IDs to prevent DDOS via a passive cache
+
+https://hackernoon.com/protecting-apis-from-the-ddos-attacks-by-signing-the-pks-c1eca7cc7725#.qnh6guepc
+
 ### reddit caching arch
 
 https://redditblog.com/2017/1/17/caching-at-reddit/
