@@ -1,3 +1,7 @@
+## Webworker parallelism + memory savings using shared array buffers
+
+http://50linesofco.de/post/2017-02-06-javascript-in-parallel-web-workers-transferables-and-sharedarraybuffer
+
 ## node core dump analysis
 
 https://www.joyent.com/blog/post-mortem-debugging-and-promises
