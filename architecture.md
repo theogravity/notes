@@ -1,3 +1,7 @@
+### scaling message searching via elasticache
+
+https://blog.discordapp.com/how-discord-indexes-billions-of-messages-e3d5e9be866f
+
 ### signing resource IDs to prevent DDOS via a passive cache
 
 https://hackernoon.com/protecting-apis-from-the-ddos-attacks-by-signing-the-pks-c1eca7cc7725#.qnh6guepc
