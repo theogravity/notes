@@ -1,3 +1,7 @@
+### scaling redis
+
+http://tech.trivago.com/2017/01/25/learn-redis-the-hard-way-in-production/?
+
 ### scaling message searching via elasticache
 
 https://blog.discordapp.com/how-discord-indexes-billions-of-messages-e3d5e9be866f
