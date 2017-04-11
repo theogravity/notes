@@ -1,3 +1,7 @@
+## Comprehensive guide on http/2 server push
+
+https://www.smashingmagazine.com/2017/04/guide-http2-server-push/
+
 ## Webworker parallelism + memory savings using shared array buffers
 
 http://50linesofco.de/post/2017-02-06-javascript-in-parallel-web-workers-transferables-and-sharedarraybuffer
