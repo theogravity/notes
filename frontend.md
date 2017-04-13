@@ -1,3 +1,7 @@
+## JS formatter
+
+http://jlongster.com/prettier-1.0
+
 ## Comprehensive guide on http/2 server push
 
 https://www.smashingmagazine.com/2017/04/guide-http2-server-push/
