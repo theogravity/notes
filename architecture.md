@@ -1,3 +1,7 @@
+### PHP 7 virtual machine architecture
+
+http://nikic.github.io/2017/04/14/PHP-7-Virtual-machine.html
+
 ### scaling redis
 
 http://tech.trivago.com/2017/01/25/learn-redis-the-hard-way-in-production/?
