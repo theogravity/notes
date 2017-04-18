@@ -1,3 +1,7 @@
+## SSR
+
+https://medium.com/walmartlabs/the-benefits-of-server-side-rendering-over-client-side-rendering-5d07ff2cefe8
+
 ## JS formatter
 
 http://jlongster.com/prettier-1.0
