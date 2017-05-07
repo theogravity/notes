@@ -1,3 +1,7 @@
+## JS Books
+
+https://github.com/getify/You-Dont-Know-JS
+
 ## SSR
 
 https://medium.com/walmartlabs/the-benefits-of-server-side-rendering-over-client-side-rendering-5d07ff2cefe8
