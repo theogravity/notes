@@ -1,3 +1,7 @@
+### Alternatives to JWT
+
+https://kev.inburke.com/kevin/things-to-use-instead-of-jwt/
+
 ### PHP 7 virtual machine architecture
 
 http://nikic.github.io/2017/04/14/PHP-7-Virtual-machine.html
