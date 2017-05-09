@@ -1,3 +1,7 @@
+### How node.js require() works
+
+http://thenodeway.io/posts/how-require-actually-works/
+
 ### Alternatives to JWT
 
 https://kev.inburke.com/kevin/things-to-use-instead-of-jwt/
