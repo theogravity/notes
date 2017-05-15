@@ -1,5 +1,9 @@
 http://stackoverflow.com/questions/2669690/why-does-google-prepend-while1-to-their-json-responses
 
+## Understanding webassembly text format
+
+https://developer.mozilla.org/en-US/docs/WebAssembly/Understanding_the_text_format
+
 ## node.js security scan
 
 https://snyk.io/
