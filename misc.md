@@ -1,3 +1,5 @@
+http://aiplaybook.a16z.com/ (ai playbook)
+
 http://blog.codetree.com/articles/what-its-like-buying-a-128k-side-project.html
 
 https://webkit.org/blog/6682/improving-color-on-the-web/
