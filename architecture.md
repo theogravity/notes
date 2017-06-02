@@ -1,3 +1,7 @@
+### Network protocols
+
+https://www.destroyallsoftware.com/compendium/network-protocols/97d3ba4c24d21147
+
 ### How node.js require() works
 
 http://thenodeway.io/posts/how-require-actually-works/
