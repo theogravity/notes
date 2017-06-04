@@ -1,3 +1,5 @@
+https://github.com/leandromoreira/digital_video_introduction/blob/master/README.md
+
 http://aiplaybook.a16z.com/ (ai playbook)
 
 http://blog.codetree.com/articles/what-its-like-buying-a-128k-side-project.html
