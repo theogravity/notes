@@ -1,3 +1,5 @@
+https://news.ycombinator.com/item?id=14523523 - uuid in databases
+
 # Postgres
 
 - Postgres internals http://www.interdb.jp/pg/index.html
