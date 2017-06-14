@@ -1,3 +1,5 @@
+https://mixmax.com/blog/modern-csrf
+
 http://stackoverflow.com/questions/2669690/why-does-google-prepend-while1-to-their-json-responses
 
 ## Understanding webassembly text format
