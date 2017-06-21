@@ -1,3 +1,5 @@
+http://jdlm.info/articles/2016/03/06/lessons-building-node-app-docker.html
+
 https://github.com/leandromoreira/digital_video_introduction/blob/master/README.md
 
 http://aiplaybook.a16z.com/ (ai playbook)
