@@ -18,6 +18,8 @@ https://www.codazen.com/choosing-graphql-client-apollo-vs-relay/
 
 ## Directory structure
 
+At the time of this writing, I'm unsure what the official directory structure should be. I organized items into what I thought made sense while I was learning this. 
+
 Each item will be explained in the guide.
 
 ```
