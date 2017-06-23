@@ -1,15 +1,41 @@
+# GraphQL Quick-Start Guide
+
 ## Required libraries
 
 - graphql - facebook graphql library
 - graphql-server-express - Apollo-developed 
 - graphql-tools - Apollo-developed server tooling
 - apollo-client - Apollo-developed graphql client
+- cors
+- body-parser
+- express
  
 Apollo was chosen because it was easy to develop with using their tooling compared to Relay Classic. 
  
 https://www.codazen.com/choosing-graphql-client-apollo-vs-relay/
 
 # Server-Side Development
+
+## Directory structure
+
+Each item will be explained in the guide.
+
+```
+├── schema/
+│   ├── item/
+│   │   ├── item.type.js
+│   │   └── item.resolvers.js
+│   ├── user/
+│   │   ├── user.type.js
+│   │   └── user.resolvers.js
+│   ├── root-query/
+│   │   ├── root-query.type.js
+│   │   └── root-query.resolvers.js
+│   ├── resolvers.js
+│   └── schema.js
+├── app.js
+└── package.json
+```
 
 ## Setting up the GraphQL server
 
