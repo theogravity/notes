@@ -1,5 +1,12 @@
 # GraphQL Quick-Start Guide
 
+The following uses Apollo tooling. Apollo was chosen because it was easy to develop with using their tooling compared to Relay Classic. 
+
+https://www.apollodata.com/
+
+https://www.codazen.com/choosing-graphql-client-apollo-vs-relay/
+
+
 ## Required libraries
 
 - graphql - facebook graphql library
@@ -9,12 +16,16 @@
 - cors
 - body-parser
 - express
- 
-Apollo was chosen because it was easy to develop with using their tooling compared to Relay Classic. 
- 
-https://www.codazen.com/choosing-graphql-client-apollo-vs-relay/
-
+  
 # Server-Side Development
+
+This does not cover defining a database and its accessors.
+
+Resources used:
+
+http://dev.apollodata.com/tools/
+https://github.com/Akryum/apollo-server-example
+https://github.com/apollographql/apollo-server-tutorial
 
 ## Directory structure
 
