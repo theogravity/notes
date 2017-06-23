@@ -45,11 +45,11 @@ app.listen(3000, () => {
 })
 ```
 
-# Defining the Schema
+## Defining the Schema
 
 http://graphql.org/learn/schema/
 
-## Define Types
+### Define Types
  
 ```javascript
 // schema/item/item.type.js
@@ -70,11 +70,11 @@ const ItemType = `
 export default ItemType
 ```
 
-## Define Root-Level Query Type
+### Define Root-Level Query Type
  
 A root-level query is defined just like any other type, but they are used as the main entrypoint into a GraphQL query.
  
-### Example
+#### Example
  
 To query for an item and get a list of items at the same time, we might perform the following query:
 
@@ -117,11 +117,11 @@ export default queryEntryPoints
 
 *Note: the name of the type (RootQuery in this example), can be named anything you want.*
 
-## Define Resolvers
+### Define Resolvers
 
 Resolvers perform lookups on the fields of a type when that field is being requested and the data is unavailable.
  
-### Implement the `RootQuery` resolvers
+#### Implement the `RootQuery` resolvers
  
 In the sample query above, GraphQL will be looking at the `RootQuery` for an `item` and `items` field.
 
@@ -151,7 +151,7 @@ const rootQueryResolvers = {
 export default rootQueryResolvers
 ```
 
-### Implement the `Item` resolvers
+#### Implement the `Item` resolvers
 
 Let's assume we have the following incoming query, which requests the following:
 
@@ -175,7 +175,7 @@ In order to return the data back:
 - `getItem(id)` implemented in `RootQuery#item()` would be defined to a database fetch for the item using the `id`
 - The database returns something like the following, which `RootQuery#item()` will return
 
-```json
+```javascript
 {
   id: 1,
   name: 'Test Item',
@@ -235,3 +235,75 @@ should map to the `User` type fields
 - The results from `Item#owner()` is attached to the `Item.owner` field
 - We now have the item's name and the owner username, so GraphQL returns just those pieces to the client
 
+## Putting the Schema + Resolvers Together
+
+We combine our resolvers into a single package
+
+```javascript
+// schema/resolvers.js
+
+import User from './user/user.resolvers'
+import Item from './item/item.resolvers'
+import RootQuery from './root-query/root-query.resolvers'
+
+export default {
+  User,
+  Item,
+  RootQuery
+}
+```
+
+Our entire schema is built here
+
+```javascript
+// schema/schema.js
+
+import UserType from './user/user.type'
+import ItemType from './item/item.type'
+
+import RootQuery from './root-query/root-query.type'
+import resolvers from './resolvers'
+
+import { makeExecutableSchema } from 'graphql-tools'
+
+// the schema type only has two properties: query and mutations
+// the RootQuery contains the root entry points into graphQL
+// If you want to define more entry points, you add to RootQuery
+const SchemaDefinition = `
+  schema {
+    query: RootQuery
+  }
+`
+
+const schema = makeExecutableSchema({
+  // Add the type definitions to the schema
+  typeDefs: [
+    SchemaDefinition,
+    RootQuery,
+    UserType,
+    ItemType
+  ],
+  // performs field lookups for a specific type
+  resolvers
+})
+
+export default schema
+```
+
+Now hook up the schema
+
+```javascript
+// app.js
+
+import express from 'express'
+import cors from 'cors'
+import { graphqlExpress, graphiqlExpress } from 'graphql-server-express'
+import bodyParser from 'body-parser'
+
+import schema from './schema/schema.js'
+
+// GraphQL Schema is imported here
+const graphQLSchema = schema
+
+...
+```
