@@ -529,3 +529,95 @@ The Apollo Developer Chrome extension is very useful. Gives you the view of the 
 
 https://chrome.google.com/webstore/detail/apollo-client-developer-t/jdkknkkbebbapilgoeccciglkfbmbnfm?hl=en-US
 
+# Mutations
+
+Mutations involves updating data. The following will describe how to implement mutations
+
+## Define Server-side mutation
+
+Implementing a mutation entrypoint is just like defining a normal query entrypoint:
+
+### Define the `RootMutation` type entrypoint definitions
+
+```javascript
+// schema/root-mutation/root-mutation.type.js
+
+const RootMutation = `
+  type RootMutation {
+    addItem (
+      name: String!,
+      desc: String,
+      ownerId: ID!
+    ): Item
+  }
+`
+export default RootMutation
+
+```
+
+*Just like the `RootQuery`, you can change the name of the `RootMutation` type to whatever you want.*
+
+### Define the `RootMutation` resolver
+
+Defining the resolver is just like any other resolver.
+
+```javascript
+// schema/root-mutation/root-mutation.resolvers.js
+
+const rootMutationResolvers = {
+  async addCapsule (rootObj, { name, desc, ownerId }) {
+    return await addItem({ name, desc, ownerId })
+  }
+}
+
+export default rootMutationResolvers
+```
+
+### Add the `RootMutation` resolver to the master resolvers
+
+```
+// schema/resolvers.js
+
+// I'm not including the other imports for clarity
+import RootMutation from './root-mutation/root-mutation.resolvers.js'
+
+export default {
+  User,
+  Item,
+  RootQuery,
+  // New addition here
+  RootMutation
+}
+```
+
+### Register the `RootMutation` type to the schema
+
+```
+// schema/schema.js
+
+// not including the other imports here for clarity
+import RootMutation from './root-mutation/root-mutation.type.js'
+
+// attach the RootMutation as a mutation
+// only ONE root query and mutation can be defined
+const SchemaDefinition = `
+  schema {
+    query: RootQuery,
+    mutation: RootMutation
+  }
+`
+
+const schema = makeExecutableSchema({
+  typeDefs: [
+    SchemaDefinition,
+    RootQuery,
+    // New addition here, can be added in any position in this array
+    RootMutation,
+    UserType,
+    CapsuleType
+  ],
+  resolvers
+})
+
+```
+
