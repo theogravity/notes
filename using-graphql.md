@@ -8,7 +8,9 @@ https://www.codazen.com/choosing-graphql-client-apollo-vs-relay/
   
 # Server-Side Development
 
-This does not cover defining a database and its accessors.
+Goal: Understand what server-side development / structure is like.
+
+This does not cover defining a database and its accessors. You will not have a working server without implementing some kind of database / mock layer using this guide. 
 
 Resources used:
 
