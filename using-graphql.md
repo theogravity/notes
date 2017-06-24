@@ -13,7 +13,9 @@ This does not cover defining a database and its accessors.
 Resources used:
 
 http://dev.apollodata.com/tools/
+
 https://github.com/Akryum/apollo-server-example
+
 https://github.com/apollographql/apollo-server-tutorial
 
 ## Required libraries
