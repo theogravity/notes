@@ -12,6 +12,10 @@ https://www.codazen.com/choosing-graphql-client-apollo-vs-relay/
 - Read the basics of how GraphQL queries / types work - http://graphql.org/learn/
   - If you're a bit unclear on either, the guide will hopefully show how it works and fits together
 - ES6 usage - uncommonly used ES6 elements are clarified in the examples
+
+The Apollo Developer Chrome extension is very useful. Gives you the view of the underlying redux store state, and you can also try queries as well.
+
+https://chrome.google.com/webstore/detail/apollo-client-developer-t/jdkknkkbebbapilgoeccciglkfbmbnfm?hl=en-US
   
 # Server-Side Development
 
@@ -522,12 +526,6 @@ const ItemListView = graphql(getItemList)(ItemList)
 
 export default ItemListView
 ```
-
-# Add-ons
-
-The Apollo Developer Chrome extension is very useful. Gives you the view of the underlying redux store state, and you can also try queries as well.
-
-https://chrome.google.com/webstore/detail/apollo-client-developer-t/jdkknkkbebbapilgoeccciglkfbmbnfm?hl=en-US
 
 # Mutations
 
