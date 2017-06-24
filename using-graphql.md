@@ -539,6 +539,8 @@ Implementing a mutation entrypoint is just like defining a normal query entrypoi
 
 ### Define the `RootMutation` type entrypoint definitions
 
+We'll add a field called `RootMutation.addItem`, which will be the entrypoint to add an item.
+
 ```javascript
 // schema/root-mutation/root-mutation.type.js
 
@@ -565,8 +567,10 @@ Defining the resolver is just like any other resolver.
 // schema/root-mutation/root-mutation.resolvers.js
 
 const rootMutationResolvers = {
-  async addCapsule (rootObj, { name, desc, ownerId }) {
-    return await addItem({ name, desc, ownerId })
+  // this corresponds to the `RootMutation.addItem` type
+  async addItem (rootObj, { name, desc, ownerId }) {
+    // you'd have to implement this method yourself, would insert the item into a db
+    return await addNewItem({ name, desc, ownerId })
   }
 }
 
