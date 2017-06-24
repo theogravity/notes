@@ -10,7 +10,10 @@ https://www.codazen.com/choosing-graphql-client-apollo-vs-relay/
 
 Goal: Understand what server-side development / structure is like.
 
-This does not cover defining a database and its accessors. You will not have a working server without implementing some kind of database / mock layer using this guide. 
+This does not cover:
+
+- Defining a database and its accessors. You will not have a working server without implementing some kind of database / mock layer using this guide. 
+- Babel transpiling setup
 
 Resources used:
 
@@ -348,3 +351,172 @@ const graphQLSchema = schema
 
 ...
 ```
+
+# Client-side Development
+
+Goal: Implement some really basic stuff to test the server implementation. Also understand what dev is like using the Apollo client.
+
+This does not cover:
+
+- Babel transpiling setup
+- Webpack setup
+- Server hosting setup
+- How to break up your GraphQL queries into fragments
+- How to perform mutations on your data (they're barely any different than defining calling a query)
+
+## Required libraries
+
+- react
+- react-dom
+- apollo-client
+- react-apollo
+- prop-types
+- graphql-tag
+- react-router-dom
+
+## Directory structure
+
+This structure is really bare-bones and has no rhyme or reason to it, it was just made to get off the ground running quickly to understand the client implementation.
+
+```
+├── queries/
+│   └── item.queries.js
+├── components/
+│   └── ItemList.jsx
+├── index.js
+└── package.json
+```
+
+## Apollo Client + Routing setup
+
+```javascript
+// index.js
+
+import React from 'react'
+import ReactDOM from 'react-dom'
+
+// The ApolloClient allows you to call the GraphQL API server
+// and parses responses
+import ApolloClient, { createNetworkInterface } from 'apollo-client'
+
+// The ApolloProvider uses redux underneath the hood
+// and provides data connections to your components
+import { ApolloProvider } from 'react-apollo'
+
+import {
+  BrowserRouter as Router,
+  Route
+} from 'react-router-dom'
+
+import ItemList from './components/ItemList.jsx'
+
+const client = new ApolloClient({
+  // replace the uri with your server's host/port
+  networkInterface: createNetworkInterface({ uri: 'http://localhost:3000/graphql'}),
+})
+
+ReactDOM.render((
+    <ApolloProvider client={client}>
+      <Router>
+        <div>
+          <Route exact path='/' component={ItemList} />
+        </div>
+      </Router>
+    </ApolloProvider>
+  ),
+  document.getElementById('root')
+)
+```
+
+## Define queries
+
+```javascript
+// queries/item.queries.js
+
+import gql from 'graphql-tag'
+
+export default {
+  // this is a feature called template tags
+  // https://developers.google.com/web/updates/2015/01/ES6-Template-Strings#tagged_templates
+  getItemList: gql`query ItemListQuery {
+      items {
+        id
+        name,
+        owner {
+          username
+        }
+      }
+    }`
+  }
+}
+
+```
+
+## `ItemList` component
+
+```javascript
+// components/ItemList.jsx
+import React from 'react'
+import PropTypes from 'prop-types'
+import { graphql } from 'react-apollo'
+import { Link } from 'react-router-dom'
+import { getItemList } from '../queries/item.queries.js'
+
+class ItemList extends React.Component {
+  render () {
+    if (this.props.data.loading) {
+      return (<div>Loading</div>)
+    }
+
+    if (this.props.data.error) {
+      console.log(this.props.data.error)
+      return (<div>An unexpected error occurred</div>)
+    }
+
+    return (
+      <div>
+        <ul>
+        {this.props.data.capsules.map((capsule) => {
+          return (
+            <li key={capsule.id}>
+              {capsule.id} - {capsule.name} - {capsule.owner.username}
+            </li>
+          )
+        })}
+        </ul>
+        <br /><br/>
+        <Link to='/addCapsule'>New Capsule</Link>
+      </div>
+    )
+  }
+}
+
+ItemList.propTypes = {
+  // This structure is Apollo-specific
+  // the prop starts with a data root key
+  // and contains loading, error, and your graphql root fields
+  // that you're interested in pulling
+  // see: https://www.learnapollo.com/tutorial-react/react-02#Displaying[object Object]information[object Object]of[object Object]your[object Object]trainer
+  // under "Using query results in React components"
+
+  data: PropTypes.shape({
+    loading: PropTypes.bool,
+    error: PropTypes.object,
+    // This corresponds with the 'items' field in the 'ItemListQuery'
+    items: PropTypes.arrayOf(PropTypes.object),
+  }).isRequired
+}
+
+// wrap the graphql (Apollo) store around the component
+// and call the getItemList query when there is a need to fetch data
+const ItemListView = graphql(getItemList)(ItemList)
+
+export default ItemListView
+```
+
+# Add-ons
+
+The Apollo Developer Chrome extension is very useful. Gives you the view of the underlying redux store state, and you can also try queries as well.
+
+https://chrome.google.com/webstore/detail/apollo-client-developer-t/jdkknkkbebbapilgoeccciglkfbmbnfm?hl=en-US
+
