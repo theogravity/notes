@@ -464,28 +464,30 @@ import { getItemList } from '../queries/item.queries.js'
 
 class ItemList extends React.Component {
   render () {
-    if (this.props.data.loading) {
+    const {
+      data
+    } = this.props
+  
+    if (data.loading) {
       return (<div>Loading</div>)
     }
 
-    if (this.props.data.error) {
-      console.log(this.props.data.error)
+    if (data.error) {
+      console.log(data.error)
       return (<div>An unexpected error occurred</div>)
     }
 
     return (
       <div>
         <ul>
-        {this.props.data.capsules.map((capsule) => {
+        {data.items.map((item) => {
           return (
-            <li key={capsule.id}>
-              {capsule.id} - {capsule.name} - {capsule.owner.username}
+            <li key={item.id}>
+              {item.id} - {item.name} - {item.owner.username}
             </li>
           )
         })}
         </ul>
-        <br /><br/>
-        <Link to='/addCapsule'>New Capsule</Link>
       </div>
     )
   }
