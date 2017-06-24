@@ -354,6 +354,8 @@ const graphQLSchema = schema
 
 # Client-side Development
 
+https://www.learnapollo.com/tutorial-react/react-01
+
 Goal: Implement some really basic stuff to test the server implementation. Also understand what dev is like using the Apollo client.
 
 This does not cover:
