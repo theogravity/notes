@@ -5,6 +5,13 @@ The following uses Apollo tooling. Apollo was chosen because it was easy to deve
 https://www.apollodata.com/
 
 https://www.codazen.com/choosing-graphql-client-apollo-vs-relay/
+
+## Prerequisites
+
+- You should be familiar with setting up a node.js server / babel transpiling / bundling (if necessary)
+- Read the basics of how GraphQL queries / types work - http://graphql.org/learn/
+  - If you're a bit unclear on either, the guide will hopefully show how it works and fits together
+- ES6 usage - uncommonly used ES6 elements are clarified in the examples
   
 # Server-Side Development
 
@@ -12,8 +19,9 @@ Goal: Understand what server-side development / structure is like.
 
 This does not cover:
 
-- Defining a database and its accessors. You will not have a working server without implementing some kind of database / mock layer using this guide. 
-- Babel transpiling setup
+- Defining a database and its accessors. You will not have a working server without implementing some kind of database / mock layer using this guide.
+  - I personally recommend http://knexjs.org/ and http://vincit.github.io/objection.js/ for setting up a database
+  - Alternatively, you can define an in-memory database, using arrays/variables to store data
 
 Resources used:
 
@@ -360,9 +368,6 @@ Goal: Implement some really basic stuff to test the server implementation. Also 
 
 This does not cover:
 
-- Babel transpiling setup
-- Webpack setup
-- Server hosting setup
 - How to break up your GraphQL queries into fragments
 - How to perform mutations on your data (they're barely any different than defining calling a query)
 
