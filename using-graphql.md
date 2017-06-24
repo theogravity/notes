@@ -577,7 +577,7 @@ export default rootMutationResolvers
 
 ### Add the `RootMutation` resolver to the master resolvers
 
-```
+```javascript
 // schema/resolvers.js
 
 // I'm not including the other imports for clarity
@@ -594,7 +594,7 @@ export default {
 
 ### Register the `RootMutation` type to the schema
 
-```
+```javascript
 // schema/schema.js
 
 // not including the other imports here for clarity
