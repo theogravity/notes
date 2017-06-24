@@ -5,17 +5,6 @@ The following uses Apollo tooling. Apollo was chosen because it was easy to deve
 https://www.apollodata.com/
 
 https://www.codazen.com/choosing-graphql-client-apollo-vs-relay/
-
-
-## Required libraries
-
-- graphql - facebook graphql library
-- graphql-server-express - Apollo-developed 
-- graphql-tools - Apollo-developed server tooling
-- apollo-client - Apollo-developed graphql client
-- cors
-- body-parser
-- express
   
 # Server-Side Development
 
@@ -26,6 +15,15 @@ Resources used:
 http://dev.apollodata.com/tools/
 https://github.com/Akryum/apollo-server-example
 https://github.com/apollographql/apollo-server-tutorial
+
+## Required libraries
+
+- graphql - facebook graphql library
+- graphql-server-express - Apollo-developed 
+- graphql-tools - Apollo-developed server tooling
+- cors
+- body-parser
+- express
 
 ## Directory structure
 
