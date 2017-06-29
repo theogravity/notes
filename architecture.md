@@ -1,5 +1,7 @@
 https://12factor.net/
 
+https://segment.com/blog/exactly-once-delivery/ - message queues kafka - deliver only once scaling to 1bn
+
 ### Network protocols
 
 https://www.destroyallsoftware.com/compendium/network-protocols/97d3ba4c24d21147
