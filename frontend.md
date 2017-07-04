@@ -2,6 +2,10 @@ https://mixmax.com/blog/modern-csrf
 
 http://stackoverflow.com/questions/2669690/why-does-google-prepend-while1-to-their-json-responses
 
+## ReactJS underneath the hood
+
+https://bogdan-lyashenko.github.io/Under-the-hood-ReactJS/
+
 ## Understanding webassembly text format
 
 https://developer.mozilla.org/en-US/docs/WebAssembly/Understanding_the_text_format
