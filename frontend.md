@@ -1,3 +1,5 @@
+https://medium.com/outsystems-experts/how-to-achieve-60-fps-animations-with-css3-db7b98610108
+
 https://mixmax.com/blog/modern-csrf
 
 http://stackoverflow.com/questions/2669690/why-does-google-prepend-while1-to-their-json-responses
