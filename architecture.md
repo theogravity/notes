@@ -1,3 +1,5 @@
+http://www.compoundtheory.com/scaling-dedicated-game-servers-with-kubernetes-part-1-containerising-and-deploying/
+
 https://12factor.net/
 
 https://segment.com/blog/exactly-once-delivery/ - message queues kafka - deliver only once scaling to 1bn
