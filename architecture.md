@@ -1,3 +1,5 @@
+https://github.com/donnemartin/system-design-primer
+
 http://www.compoundtheory.com/scaling-dedicated-game-servers-with-kubernetes-part-1-containerising-and-deploying/
 
 https://12factor.net/
