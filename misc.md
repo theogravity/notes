@@ -1,3 +1,5 @@
+http://andrewkelley.me/post/jamulator.html (Statically Recompiling NES Games into Native Executables with LLVM and Go)
+
 http://www.roguelynn.com/words/explain-like-im-5-kerberos/
 
 http://dukope.tumblr.com/post/83177288060/localizing-papers-please-papers-please-was
