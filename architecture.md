@@ -1,3 +1,5 @@
+https://hackernoon.com/electron-the-bad-parts-2b710c491547
+
 https://stripe.com/blog/api-versioning
 
 https://github.com/donnemartin/system-design-primer
