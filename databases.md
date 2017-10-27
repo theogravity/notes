@@ -1,3 +1,5 @@
+https://news.ycombinator.com/item?id=15569478 - Implementing Stripe-Like Idempotency Keys in Postgres (brandur.org)
+
 https://begriffs.com/posts/2017-08-01-practical-guide-sql-isolation.html
 
 http://highscalability.com/blog/2010/12/6/what-the-heck-are-you-actually-using-nosql-for.html - when to use a nosql database
