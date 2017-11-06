@@ -1,3 +1,5 @@
+https://news.ycombinator.com/item?id=15634953 - mastering postgres for app devs book
+
 https://news.ycombinator.com/item?id=15569478 - Implementing Stripe-Like Idempotency Keys in Postgres (brandur.org)
 
 https://begriffs.com/posts/2017-08-01-practical-guide-sql-isolation.html
