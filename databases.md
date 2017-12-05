@@ -10,6 +10,8 @@ https://news.ycombinator.com/item?id=14523523 - uuid in databases
 
 # Postgres
 
+- fulltext search https://blog.lateral.io/2015/05/full-text-search-in-milliseconds-with-postgresql/
+
 - Postgres internals http://www.interdb.jp/pg/index.html
 
 - Securing postgres http://thebuild.com/presentations/pgconfeu-2016-securing-postgresql.pdf
