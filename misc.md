@@ -1,3 +1,5 @@
+https://news.ycombinator.com/item?id=15919115 - Machine learning 101
+
 https://medium.facilelogin.com/short-lived-certificates-netflix-fd5f3ae5bc9
 
 http://andrewkelley.me/post/jamulator.html (Statically Recompiling NES Games into Native Executables with LLVM and Go)
