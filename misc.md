@@ -1,3 +1,5 @@
+https://routley.io/tech/2017/12/28/hand-writing-dns-messages.html
+
 https://news.ycombinator.com/item?id=15919115 - Machine learning 101
 
 https://medium.facilelogin.com/short-lived-certificates-netflix-fd5f3ae5bc9
