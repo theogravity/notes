@@ -1,3 +1,5 @@
+https://gravitational.com/blog/running-postgresql-on-kubernetes/
+
 https://begriffs.com/posts/2018-01-01-sql-keys-in-depth.html - choosing your key type / uniqueness
 
 https://news.ycombinator.com/item?id=15634953 - mastering postgres for app devs book
