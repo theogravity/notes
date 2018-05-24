@@ -1,3 +1,5 @@
+https://segment.com/blog/introducing-centrifuge/ - queue architectures
+
 http://blog.pragmaticengineer.com/distributed-architecture-concepts-i-have-learned-while-building-payments-systems/
 
 https://www.pkcsecurity.com/untangling-webrtc-flow.html - webtrc visualizations + architecture
