@@ -1,3 +1,5 @@
+https://frontendian.co/cors
+
 Cryptographic right answers:
 
 https://news.ycombinator.com/item?id=16748400
