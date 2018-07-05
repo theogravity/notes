@@ -1,3 +1,5 @@
+https://rjuju.github.io/postgresql/2018/07/03/diagnostic-of-unexpected-slowdown.html
+
 https://gravitational.com/blog/running-postgresql-on-kubernetes/
 
 https://begriffs.com/posts/2018-01-01-sql-keys-in-depth.html - choosing your key type / uniqueness
