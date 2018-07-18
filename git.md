@@ -1,3 +1,7 @@
+## Default to ssh keys vs https for git remote operations
+
+https://stackoverflow.com/questions/11200237/how-do-i-get-git-to-default-to-ssh-and-not-https-for-new-repositories
+
 ## Easier review on github
 
 Clear whitespaces on PR reviews with `?w=1`. You cannot add comments though in this mode, but makes the thing easier to read.
