@@ -1,3 +1,3 @@
-How to properly set up IP anycast
+How to properly set up TCP anycast
 
 https://bill.herrin.us/network/anycasttcp.html
