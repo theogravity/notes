@@ -1,3 +1,5 @@
+https://hharnisc.github.io/2018/11/25/twenty-questions-to-ask-before-joining-a-startup.html
+
 https://getweeklyupdate.com/manager-guide
 
 https://hackertarget.com/tcpdump-examples/
