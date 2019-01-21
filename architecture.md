@@ -1,3 +1,5 @@
+https://github.com/hjacobs/kubernetes-failure-stories
+
 https://segment.com/blog/introducing-centrifuge/ - queue architectures
 
 http://blog.pragmaticengineer.com/distributed-architecture-concepts-i-have-learned-while-building-payments-systems/
