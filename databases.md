@@ -1,3 +1,5 @@
+http://www.interdb.jp/pg/index.html - the internals of postgres
+
 https://rjuju.github.io/postgresql/2018/07/03/diagnostic-of-unexpected-slowdown.html
 
 https://gravitational.com/blog/running-postgresql-on-kubernetes/
