@@ -31,6 +31,10 @@ https://news.ycombinator.com/item?id=14523523 - uuid in databases
 - `bytea` data types require specific conversion
 - be aware of which db call to use depending on the situation https://github.com/vitaly-t/pg-promise#query-result-mask
 
+## Dump a database
+
+pg_dump -U <username> -h localhost -p 6544 -w -F c -b -v -f backup/<filename>.dump <dbname>
+
 ## Trigram indices
 
 https://about.gitlab.com/2016/03/18/fast-search-using-postgresql-trigram-indexes/?
