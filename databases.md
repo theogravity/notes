@@ -33,7 +33,11 @@ https://news.ycombinator.com/item?id=14523523 - uuid in databases
 
 ## Dump a database
 
-pg_dump -U <username> -h localhost -p 6544 -w -F c -b -v -f backup/<filename>.dump <dbname>
+`pg_dump -U <username> -h localhost -p 6544 -w -F c -b -v -f backup/<filename>.dump <dbname>`
+  
+## restore a database
+
+`pg_restore -U <username> -h localhost -p 5432 -d <dbname> < backup/<filename>.dump`
 
 ## Trigram indices
 
