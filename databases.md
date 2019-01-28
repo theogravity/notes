@@ -31,6 +31,9 @@ https://news.ycombinator.com/item?id=14523523 - uuid in databases
 - `bytea` data types require specific conversion
 - be aware of which db call to use depending on the situation https://github.com/vitaly-t/pg-promise#query-result-mask
 
+https://medium.com/@gajus/lessons-learned-scaling-postgresql-database-to-1-2bn-records-month-edc5449b3067
+https://github.com/gajus/slonik - node postgres client 
+
 ## Dump a database
 
 `pg_dump -U <username> -h localhost -p 6544 -w -F c -b -v -f backup/<filename>.dump <dbname>`
