@@ -1,3 +1,7 @@
+Two-factor auth with public-key cryptography
+
+https://news.ycombinator.com/item?id=19071751 
+
 Everything about PKI
 
 https://smallstep.com/blog/everything-pki.html
