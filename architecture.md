@@ -1,3 +1,5 @@
+https://http3-explained.haxx.se/en/ - how http3 works
+
 https://github.com/hjacobs/kubernetes-failure-stories
 
 https://segment.com/blog/introducing-centrifuge/ - queue architectures
