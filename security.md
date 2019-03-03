@@ -1,3 +1,5 @@
+https://blog.cryptographyengineering.com/2019/02/11/attack-of-the-week-searchable-encryption-and-the-ever-expanding-leakage-function/
+
 Two-factor auth with public-key cryptography
 
 https://news.ycombinator.com/item?id=19071751 
