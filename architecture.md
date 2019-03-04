@@ -1,3 +1,5 @@
+https://github.com/joelparkerhenderson/queueing_theory
+
 https://http3-explained.haxx.se/en/ - how http3 works
 
 https://github.com/hjacobs/kubernetes-failure-stories
