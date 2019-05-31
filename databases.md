@@ -1,3 +1,5 @@
+https://github.com/hasura/graphql-engine/blob/master/architecture/live-queries.md
+
 https://pgdash.io/blog/postgres-indexes.html
 
 http://www.interdb.jp/pg/index.html - the internals of postgres
