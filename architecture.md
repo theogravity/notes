@@ -1,3 +1,5 @@
+https://blog.theodo.com/2019/06/web-single-sign-on-the-saml-2-0-perspective/
+
 https://github.com/hjacobs/kubernetes-failure-stories
 
 https://github.com/joelparkerhenderson/queueing_theory
