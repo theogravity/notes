@@ -1,3 +1,5 @@
+https://wiki.postgresql.org/wiki/Don%27t_Do_This
+
 https://github.com/hasura/graphql-engine/blob/master/architecture/live-queries.md
 
 https://pgdash.io/blog/postgres-indexes.html
