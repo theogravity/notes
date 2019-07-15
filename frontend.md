@@ -1,3 +1,5 @@
+https://dassur.ma/things/is-postmessage-slow/
+
 https://reactjs.org/blog/2017/12/15/improving-the-repository-infrastructure.html
 
 https://functional.works-hub.com/blog/Functional-Programming-Jargon
