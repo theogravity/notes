@@ -12,6 +12,7 @@ These are my personal notes from doing a deep-dive into the internals of `passpo
   * The "profile" parameter will be the user data returned from the oauth service
   * The point of this callback is to check if a user exists / create user in your local database
   * The `done(err, data)` callback is passed onto `passport.serializeUser()`
+  * Set `data` to `false` if the user cannot be authenticated (do not set `err`, this is for server errors only)
   
 ## Session management
 
@@ -39,6 +40,7 @@ Describes what data to store in the session store.
 
 - `passport.serializeUser(fn(data, done))`: This is called after the `verify callback` in the strategy, 
 where `data` is the result from that callback.
+  * Undocumented: `fn(req, data, done)`. To skip to the next serializer, set `err='pass'`.
 - When calling `done(err, data)`, the `data` is serialized to the session store under the `passport.user` property.
 - Most implementations seem to pass the user id for the `data` value, but this is not required; you can store full 
 user data if you want.
@@ -48,9 +50,11 @@ user data if you want.
 Data set in the session store from serialization is the input to the deserializer. The callback sets the `req.user` value.
 
 - `passport.deserializeUser(fn(data, done)`: The `data` param comes from the session store fetch.
+  * Undocumented: `fn(req, data, done)`
 - Calling `done(err, data)` sets the `req.user` property with the value from `data`.
 - Most implementations that have the user id set in the serialization step will use this as an opportunity to 
 fetch user data from a database.
+- If the user no longer exists for the session, call callback with `null`/`false` for the `data` value
 
 ## Authentication
 
@@ -63,6 +67,7 @@ fetch user data from a database.
 - The third parameter is a callback in the form of `fn(err, user, info)`
   * if auth fails, `user` will be false
   * You **must** manually set `req.user` by calling `req.login(user, next)` in the callback
+    - `req.login` calls the user serializers
   * Use this callback to redirect users to the login screen if `user` is `false`, or handle errors
 
 **If you do not specify a callback**
