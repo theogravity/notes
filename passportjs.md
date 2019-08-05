@@ -29,7 +29,7 @@ encoded as property called `passport.user`)
 
 The `de/serialize()` registration functions is actually middleware - you can register multiple de/serializers.
 
-# Serialization 
+### Serialization 
 
 Describes what data to store in the session store.
 
@@ -39,7 +39,7 @@ where `data` is the result from that callback.
 - Most implementations seem to pass the user id for the `data` value, but this is not required; you can store full 
 user data if you want.
 
-# Deserialization
+### Deserialization
 
 Data set in the session store from serialization is the input to the deserializer. The callback sets the `req.user` value.
 
