@@ -22,7 +22,7 @@ These are my personal notes from doing a deep-dive into the internals of `passpo
 - The session set call has the following format: `fn(sessionId, expTime, data)`
 - Most stores will serialize the `data` using `JSON.stringify()`
 
-The session store is set / updated in the following situations:
+### The session store is set / updated in the following situations
 
 - Visiting the page for the first time (if not logged in, a session id is generated, with an empty serialized cookie as the 
 value + expiration)
