@@ -1,6 +1,8 @@
 # Architecture notes for passport.js
 
-Useful Reference - [Passport: The Hidden Manual by jwalton](https://github.com/jwalton/passport-api-docs)
+These are my personal notes from doing a deep-dive into the internals of `passport.js`, and also from reading:
+
+[Passport: The Hidden Manual by jwalton](https://github.com/jwalton/passport-api-docs)
 
 ## Strategy
 
@@ -52,5 +54,19 @@ fetch user data from a database.
 
 ## Authentication
 
+- The first parameter of `passport.authenticate()` can be a single or an array of strategies to try until one is successful.
+- Some strategies may redirect the user to login (like OAuth)
 
+**Optional**
+
+- The second parameter are a configuration object to send to the strategy
+- The third parameter is a callback in the form of `fn(err, user, info)`
+  * if auth fails, `user` will be false
+  * You **must** manually set `req.user` by calling `req.login(user, next)` in the callback
+  * Use this callback to redirect users to the login screen if `user` is `false`, or handle errors
+
+**If you do not specify a callback**
+
+- If a strategy succeeds, then `req.user` will be set
+- If all strategies fail, then a 401 response will be sent
 
