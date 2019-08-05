@@ -12,6 +12,8 @@
 ## Session management
 
 - OAuth2 integrations require the use of a session store, usually provided by `express-session`. The default is an in-memory store.
+  * The reason for this is that the session store will contain a computed CSRF token, which is sent as the `state` query param in the initial OAuth2 call to the 3rd party provider. On sucessful login, the `state` and other query params are used to check if the original CSRF matches
+  * More info on OAuth2 CSRF attacks: https://security.stackexchange.com/questions/20187/oauth2-cross-site-request-forgery-and-state-parameter
 - The session set call has the following format: `fn(sessionId, expTime, data)`
 - Most stores will serialize the `data` using `JSON.stringify()`
 
