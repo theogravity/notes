@@ -1,5 +1,7 @@
 # Architecture notes for passport.js
 
+Useful Reference - [Passport: The Hidden Manual by jwalton](https://github.com/jwalton/passport-api-docs)
+
 ## Strategy
 
 - To register multiple copies of the same strategy, do `passport.use('strategy-id', new Strategy())`
@@ -47,4 +49,8 @@ Data set in the session store from serialization is the input to the deserialize
 - Calling `done(err, data)` sets the `req.user` property with the value from `data`.
 - Most implementations that have the user id set in the serialization step will use this as an opportunity to 
 fetch user data from a database.
+
+## Authentication
+
+
 
