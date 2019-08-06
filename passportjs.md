@@ -84,7 +84,7 @@ You want to use PKCE when:
 - Cannot securely store a Client Secret. Decompiling the app will reveal the Client Secret. The Client Secret is bound to the app and is the same for all users and devices.
 - May make use of a custom URL scheme to capture redirects (e.g., MyApp://) potentially allowing malicious applications to receive an Authorization Code from your Authorization Server.
 
-### Implementation
+### Notes
 
 Sources: 
 
@@ -98,3 +98,67 @@ Sources:
   * `code_challenge_method=plain` is not a recommended option, but can be used if the request path is already protected, and can be easedropped
   *  The use of `S256` protects against disclosure of the `code_verifier` value to an attacker
 - The `S256` method protects against `code_challenge` interception since the challenge cannot be used without the `code_verifier`
+
+### Implementation: Client
+
+Assuming `S256` challenge method.
+
+#### Generate Code Verifier
+
+The result should be stored locally on the client.
+
+```javascript
+// from https://auth0.com/docs/flows/guides/auth-code-pkce/call-api-auth-code-pkce#create-a-code-verifier
+function base64URLEncode(str) {
+    return str.toString('base64')
+        .replace(/\+/g, '-')
+        .replace(/\//g, '_')
+        .replace(/=/g, '');
+}
+var verifier = base64URLEncode(crypto.randomBytes(32));
+```
+
+#### Create Code Challenge
+
+This value is to be sent with the authorization request to the OAuth2 server.
+
+RFC7636 states for `S256`:
+
+`code_challenge = BASE64URL-ENCODE(SHA256(ASCII(code_verifier)))`
+
+```javascript
+// from https://auth0.com/docs/flows/guides/auth-code-pkce/call-api-auth-code-pkce#create-a-code-verifier
+
+function sha256(buffer) {
+    return crypto.createHash('sha256').update(buffer).digest();
+}
+var challenge = base64URLEncode(sha256(verifier));
+```
+
+#### Send Code Challenge with Authorization Request
+
+The value of `code_challenge` from the prior step, along with the `code_challenge_method=S256` should be sent as parameters to the auth request to the OAuth server.
+
+#### Server Returns Auth Code / Client Sends Auth Code + Verifier to Token Endpoint
+
+In addition to the normal parameters to the token endpoint, `code_verifier` is also sent.
+
+(`code_challenge_method` is not required as a proper server implementation will tie (eg via hashing) the `code_challenge_method` and `code_challenge` to the auth code.
+
+### Implementation: Server
+
+When defining a passport strategy, the following parameters must be used to enable PKCE:
+
+```javascript
+passport.use(new OAuth2Strategy({
+    ...
+    // this must be true - the state needs to be true for the verifier to persist in the session
+    state: true,
+    pkce: true
+  },
+  function(accessToken, refreshToken, profile, cb) {
+    // ...
+  })
+);
+```
+
