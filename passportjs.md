@@ -4,6 +4,30 @@ These are my personal notes from doing a deep-dive into the internals of `passpo
 
 [Passport: The Hidden Manual by jwalton](https://github.com/jwalton/passport-api-docs)
 
+## Table of Contents
+
+- [Architecture notes for passport.js](#architecture-notes-for-passportjs)
+  * [Strategy](#strategy)
+  * [Session management](#session-management)
+    + [The session store is set / updated in the following situations](#the-session-store-is-set---updated-in-the-following-situations)
+  * [User de/serialization](#user-de-serialization)
+    + [Serialization](#serialization)
+    + [Deserialization](#deserialization)
+  * [Authentication / Login](#authentication---login)
+    + [`req.login()` notes](#-reqlogin----notes)
+  * [Logout](#logout)
+- [Authorization Code Flow with Proof Key for Code Exchange (PKCE)](#authorization-code-flow-with-proof-key-for-code-exchange--pkce-)
+  * [Notes](#notes)
+  * [Implementation: Client](#implementation--client)
+    + [Generate Code Verifier](#generate-code-verifier)
+    + [Create Code Challenge](#create-code-challenge)
+    + [Send Code Challenge with Authorization Request](#send-code-challenge-with-authorization-request)
+    + [Server Returns Auth Code / Client Sends Auth Code + Verifier to Token Endpoint](#server-returns-auth-code---client-sends-auth-code---verifier-to-token-endpoint)
+  * [Implementation: Server](#implementation--server)
+
+<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
+
+
 ## Strategy
 
 - To register multiple copies of the same strategy, do `passport.use('strategy-id', new Strategy())`
