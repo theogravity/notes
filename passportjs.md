@@ -56,7 +56,7 @@ Data set in the session store from serialization is the input to the deserialize
 fetch user data from a database.
 - If the user no longer exists for the session, call callback with `null`/`false` for the `data` value
 
-## Authentication
+## Authentication / Login
 
 - The first parameter of `passport.authenticate()` can be a single or an array of strategies to try until one is successful.
 - Some strategies may redirect the user to login (like OAuth)
@@ -75,7 +75,15 @@ fetch user data from a database.
 - If a strategy succeeds, then `req.user` will be set
 - If all strategies fail, then a 401 response will be sent
 
-## Authorization Code Flow with Proof Key for Code Exchange (PKCE)
+### `req.login()` notes
+
+The auth middleware will call it if you do not specify the callback function. The passport.js doc says that you may want to call it out-of-band in a situation where a user signs up for a new account to automatically log them in after registration is completed.
+
+## Logout 
+
+Call `req.logout()` to remove the `req.user` reference and clear the user session.
+
+# Authorization Code Flow with Proof Key for Code Exchange (PKCE)
 
 Source: https://auth0.com/docs/flows/concepts/auth-code-pkce
 
@@ -84,7 +92,7 @@ You want to use PKCE when:
 - Cannot securely store a Client Secret. Decompiling the app will reveal the Client Secret. The Client Secret is bound to the app and is the same for all users and devices.
 - May make use of a custom URL scheme to capture redirects (e.g., MyApp://) potentially allowing malicious applications to receive an Authorization Code from your Authorization Server.
 
-### Notes
+## Notes
 
 Sources: 
 
@@ -99,11 +107,11 @@ Sources:
   *  The use of `S256` protects against disclosure of the `code_verifier` value to an attacker
 - The `S256` method protects against `code_challenge` interception since the challenge cannot be used without the `code_verifier`
 
-### Implementation: Client
+## Implementation: Client
 
 Assuming `S256` challenge method.
 
-#### Generate Code Verifier
+### Generate Code Verifier
 
 The result should be stored locally on the client.
 
@@ -118,7 +126,7 @@ function base64URLEncode(str) {
 var verifier = base64URLEncode(crypto.randomBytes(32));
 ```
 
-#### Create Code Challenge
+### Create Code Challenge
 
 This value is to be sent with the authorization request to the OAuth2 server.
 
@@ -135,17 +143,17 @@ function sha256(buffer) {
 var challenge = base64URLEncode(sha256(verifier));
 ```
 
-#### Send Code Challenge with Authorization Request
+### Send Code Challenge with Authorization Request
 
 The value of `code_challenge` from the prior step, along with the `code_challenge_method=S256` should be sent as parameters to the auth request to the OAuth server.
 
-#### Server Returns Auth Code / Client Sends Auth Code + Verifier to Token Endpoint
+### Server Returns Auth Code / Client Sends Auth Code + Verifier to Token Endpoint
 
 In addition to the normal parameters to the token endpoint, `code_verifier` is also sent.
 
 (`code_challenge_method` is not required as a proper server implementation will tie (eg via hashing) the `code_challenge_method` and `code_challenge` to the auth code.
 
-### Implementation: Server
+## Implementation: Server
 
 When defining a passport strategy, the following parameters must be used to enable PKCE:
 
