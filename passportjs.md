@@ -75,3 +75,26 @@ fetch user data from a database.
 - If a strategy succeeds, then `req.user` will be set
 - If all strategies fail, then a 401 response will be sent
 
+## Authorization Code Flow with Proof Key for Code Exchange (PKCE)
+
+Source: https://auth0.com/docs/flows/concepts/auth-code-pkce
+
+You want to use PKCE when:
+
+- Cannot securely store a Client Secret. Decompiling the app will reveal the Client Secret. The Client Secret is bound to the app and is the same for all users and devices.
+- May make use of a custom URL scheme to capture redirects (e.g., MyApp://) potentially allowing malicious applications to receive an Authorization Code from your Authorization Server.
+
+### Implementation
+
+Sources: 
+
+- https://auth0.com/docs/api-auth/tutorials/authorization-code-grant-pkce
+- https://medium.com/passportjs/pkce-support-for-oauth-2-0-e3a77013b278
+- https://tools.ietf.org/html/rfc7636
+
+- Instead of storing a Client Secret, the client generates a `code_verifier` and a `code_challenge`
+- `code_verifier` should be at least 256 bits of entropy
+- The `code_challenge` and `code_challenge_method=S256` (`S256` should only be used) is sent to the `/authorize` endpoint
+  * `code_challenge_method=plain` is not a recommended option, but can be used if the request path is already protected, and can be easedropped
+  *  The use of `S256` protects against disclosure of the `code_verifier` value to an attacker
+- The `S256` method protects against `code_challenge` interception since the challenge cannot be used without the `code_verifier`
