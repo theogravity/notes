@@ -1,3 +1,5 @@
+https://www.figma.com/blog/how-figmas-multiplayer-technology-works/
+
 https://news.ycombinator.com/item?id=20770105 (Building a web-based plugin system)
 
 https://blog.theodo.com/2019/06/web-single-sign-on-the-saml-2-0-perspective/
