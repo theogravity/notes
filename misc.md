@@ -1,3 +1,5 @@
+https://blog.pragmaticengineer.com/developers-mentoring-other-developers/
+
 https://cstack.github.io/db_tutorial/ - write an sqlite clone from scratch
 
 https://hharnisc.github.io/2018/11/25/twenty-questions-to-ask-before-joining-a-startup.html
